@@ -1,1 +1,10 @@
+<% if user_signed_in? %>
+  Hi <%= current_user.username %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h2>Want to see private stuff</h2>
+  First, <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
+
+<% end %>
+
 <div id="map"></div>

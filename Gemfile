@@ -29,5 +29,10 @@ gem 'spring',        group: :development
 gem "rails_12factor", group: [:production]
 
 gem 'simple_form', '3.1.0.rc2'
-
 gem "geocoder"
+gem 'devise'
+gem 'omniauth-github'
+
+group :development, :test do
+  gem 'pry'
+end

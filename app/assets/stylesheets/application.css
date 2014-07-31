@@ -29,8 +29,11 @@ html,body{
   	height:100%;
 }
 
-body{
-  	padding-top:100px; /*padding for navbar*/
+.navbar-form .input-group>.form-control {
+width: 500px;
+}
+.text-css{
+  width: 500px;
 }
 
 .navbar-custom .icon-bar {
@@ -52,6 +55,7 @@ body{
 
 .navbar-custom .form-control:focus {
 	border-color: #49bfff;
+  width: 500px;
 	outline: 0;
 	-webkit-box-shadow: inset 0 0 0;
 	box-shadow: inset 0 0 0;

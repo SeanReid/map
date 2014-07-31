@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
+
   root 'map#index'
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  delete "/session" => "users/session#destroy", as: :destroy_user_session
+
+  as :user do
+    get 'signin' => 'users/session#new', :as => :new_user_session
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
