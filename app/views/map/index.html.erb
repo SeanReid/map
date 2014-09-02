@@ -1,33 +1,30 @@
 <div class="navbar navbar-custom navbar-fixed-top">
  <div class="navbar-header"><a class="navbar-brand" href="#">Map</a>
-      <!-- <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a> -->
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
       </ul>
-      <form class="navbar-form">
+      <%= form_tag create_marker_path, method: :post, remote: true, class: "navbar-form" do  %>
         <div class="form-group" style="display:inline;">
           <div class="input-group">
-            <input type="text" class="text-css form-control" placeholder="What are searching for?">
+            <%= text_field_tag 'address', "", class: "text-css form-control", placeholder: "Search Coming Soon!" %>
+            <%= form_tag "Submit" %>
             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
           </div>
-        </div>
+        <% end %>
+
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+          <li><a target="_ext">Signed in as <%= current_user.email %></a></li>
+          <% end %>
+          <li>
+            <% if user_signed_in? %>
+          <li><%= link_to("Not You?", destroy_user_session_path, :method => :delete) %></li><br><br>
+            <% else %>
+            <% end %>
+        </ul>
       </form>
     </div>
 </div>
-
-
-<% if user_signed_in? %>
-  Hi <%= current_user.username %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <h2>Want to see private stuff</h2>
-  First, <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
-
-<% end %>
 
 <div id="map"></div>

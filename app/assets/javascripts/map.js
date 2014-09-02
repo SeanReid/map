@@ -36,7 +36,7 @@ L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
       }).addTo(map);
 
 L.marker([37.115111,-76.545144]).addTo(map)
-.bindPopup("<b>Home</b><br/>Xbox is here!");
+.bindPopup("<b>Home</b><br/>Family lives here!");
 
 L.marker([37.0740948,-76.3786759,]).addTo(map)
 .bindPopup("<b>Langley</b><br/>Planes go here.");

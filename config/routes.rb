@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get 'signin' => 'users/session#new', :as => :new_user_session
   end
 
+  post 'map/create' => 'map#create', as: :create_marker
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

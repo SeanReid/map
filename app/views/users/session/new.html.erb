@@ -1,5 +1,28 @@
-<video autoplay loop mute id="bgvid">
+<video autoplay loop muted id="bgvid">
 <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
 </video>
 
-<%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
+<div class="container-full">
+  <div class="row">
+    <div class="col-lg-12 text-center v-center">
+      <h1>Map Map</h1>
+
+      <br>
+
+      <p class="lead">Get started mappin'</p>
+
+      <br>
+
+        <div style="width:340px;text-align:center;margin:0 auto;">
+        <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github), class: 'btn btn-primary btn-lg' %>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+      <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+</div>
