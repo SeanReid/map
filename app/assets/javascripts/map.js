@@ -35,8 +35,8 @@ L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         id: 'examples.map-i86knfo3'
       }).addTo(map);
 
-L.marker([37.115111,-76.545144]).addTo(map)
-.bindPopup("<b>Home</b><br/>Family lives here!");
+L.marker([37.1255699,-76.5480068]).addTo(map)
+.bindPopup("<b>Denbigh HS</b><br/>My old High School");
 
 L.marker([37.0740948,-76.3786759,]).addTo(map)
 .bindPopup("<b>Langley</b><br/>Planes go here.");
