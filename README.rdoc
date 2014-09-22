@@ -1,5 +1,3 @@
-== README
-
 This is a Ruby on Rails web app using Leaflet.js to display a custom Mapbox map. There are plotted locations with popups
 and polygons outlining locations. The assignment was a one day homework assignment at The Iron Yard. I combined 
 social login, which was learned later in the week. I also outlined a few areas on the map along with popups on 
