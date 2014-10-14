@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'map#index'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks/" }
 
   delete "/session" => "users/session#destroy", as: :destroy_user_session
 
